@@ -59,7 +59,7 @@ def buscar_similares(embedding, k=5):
 
 def generar_respuesta(pregunta, contextos):
     """Usa Gemini para responder con contexto"""
-    modelo = genai.GenerativeModel("gemini-1.5-flash")
+    modelo = genai.GenerativeModel("gemini-flash-latest")
     contexto = "\n\n".join([c["texto"] for c in contextos])
     prompt = f"""
 Eres un asistente experto. Usa el siguiente contexto para responder la pregunta del usuario.
